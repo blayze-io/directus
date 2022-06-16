@@ -18,7 +18,7 @@ export function validateKeys(
 		}
 	} else {
 		const primaryKeyFieldType = schema.collections[collection].fields[keyField].type;
-		if (primaryKeyFieldType === 'uuid' && !validateUUID(String(keys))) {
+		if (primaryKeyFieldType === 'uuid') {
 			throw new ForbiddenException();
 		} else if (primaryKeyFieldType === 'integer' && !Number.isInteger(Number(keys))) {
 			throw new ForbiddenException();
