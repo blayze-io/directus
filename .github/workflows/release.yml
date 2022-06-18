@@ -88,6 +88,7 @@ jobs:
           cd dist
           rm *.tgz
           npm i --only=production --no-package-lock
+          mkdir -p database extensions uploads
 
       - name: Archive Release
         uses: actions/checkout@master
