@@ -56,7 +56,6 @@ jobs:
 
       - name: Prepare root dist
         run: |
-          npm run pack
           cd dist
           rm *.tgz
           npm i --only=production --no-package-lock
