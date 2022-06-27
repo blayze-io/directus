@@ -61,8 +61,11 @@ jobs:
           mkdir -p database extensions uploads
           rm *.tgz
 
+      - name: Zip artifact for deployment
+        run: zip release.zip ./dist -r
+
       - name: Archive Release
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ github.ref }}
-          path: dist/
+          name: release
+          path: release.zip
