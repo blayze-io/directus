@@ -57,9 +57,9 @@ jobs:
       - name: Prepare root dist
         run: |
           cd dist
-          rm *.tgz
           npm i --only=production --no-package-lock
           mkdir -p database extensions uploads
+          rm *.tgz
 
       - name: Archive Release
         uses: thedoctor0/zip-release@main
