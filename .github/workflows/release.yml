@@ -62,8 +62,7 @@ jobs:
           rm *.tgz
 
       - name: Archive Release
-        uses: thedoctor0/zip-release@main
+        uses: actions/upload-artifact@v3
         with:
-          type: zip
-          filename: ${{ github.ref }}.zip
+          name: ${{ github.ref }}
           path: dist/
